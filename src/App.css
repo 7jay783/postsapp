@@ -1,3 +1,47 @@
 .App {
   text-align: center;
 }
+
+.header {
+  width: 100vw;
+  height: auto;
+  background-color: #04aa6d;
+}
+.navbar-brand {
+  font-size: 30px;
+  color: bisque;
+  font-weight: bold;
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.menu_btns {
+  display: inline-block;
+  width: 50%;
+}
+.nav_list,
+li > a {
+  font-weight: bold;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.active {
+  border-bottom: 2px solid white;
+}
+@media only screen and (max-width: 700px) {
+  .menu_btns {
+    display: block;
+    width: 100vw;
+    padding-bottom: 1px;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+}
