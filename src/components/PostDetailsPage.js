@@ -10,9 +10,7 @@ function PostDetailsPage(props) {
             setData(res.data)
            
         })
-        return () => {
-           
-        };
+     
     },[])
    
     useEffect(()=>{
@@ -21,6 +19,7 @@ function PostDetailsPage(props) {
             setComments(res.data)    
             console.log(res.data)       
         })
+      
     },[])
   return ( data!=null?
     <div className='text_left padding_top'>
@@ -48,12 +47,12 @@ function PostDetailsPage(props) {
    
     </tbody>
 </table>
-<div style={{textAlign:"center",margin:'auto'}}> <button className='search_btn'>Click to see Comments</button>
+{comments != null?<div style={{textAlign:"center",margin:'auto'}}> <button className='search_btn'>Click to see Comments</button>
       { comments.map(e=>{
-            return (  <div className='text_left' style={{padding:'5px 10px 5px 10px',border:'.5px solid #ddd'}}> <span style={{fontWeight:'bold'}}>Comment-{e.id}: </span>{e.body}</div>)
+            return (  <div className='text_left' style={{padding:'5px 10px 5px 10px',border:'.5px solid #ddd'}}> <span style={{fontWeight:'bold'}}>Comment : </span>{e.body}</div>)
             }
             )}
-</div>
+</div>:null}
      </div>:null
   )
 }

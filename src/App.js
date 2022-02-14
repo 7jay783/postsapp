@@ -31,7 +31,7 @@ function App() {
       <div>
           {(value === 0)&&  <HomePage setUid={(u)=>setUid(u)} setValue={(v)=>setValue(v)}/>}
           {(value === 1)&&  <PostPage uid={uid} setPid={(u)=>setPid(u)} setValue={(v)=>setValue(v)}/>}
-          {(value === 2)&&  <PostDetailsPage pid={pid} />}
+          {(value === 2)&&  <PostDetailsPage pid={pid}/>}
       </div>
       
     </div>
