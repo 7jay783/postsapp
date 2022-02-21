@@ -27,8 +27,10 @@ li > a {
   font-weight: bold;
   list-style: none;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
+  cursor: pointer;
 }
+
 .active {
   border-bottom: 2px solid white;
 }
