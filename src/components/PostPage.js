@@ -26,8 +26,8 @@ function PostPage(props) {
     <tbody>
     
     {  data!=null?
-           data.map(e=>{
-            return (  <tr>
+           data.map((e,index)=>{
+            return (  <tr key={index}>
                     <td>{e.title}</td>
                    
                     <td onClick={()=>{props.setPid(e.id)

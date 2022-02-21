@@ -48,8 +48,8 @@ function PostDetailsPage(props) {
     </tbody>
 </table>
 {comments != null?<div style={{textAlign:"center",margin:'auto'}}> <button className='search_btn'>Click to see Comments</button>
-      { comments.map(e=>{
-            return (  <div className='text_left' style={{padding:'5px 10px 5px 10px',border:'.5px solid #ddd'}}> <span style={{fontWeight:'bold'}}>Comment : </span>{e.body}</div>)
+      { comments.map((e, index)=>{
+            return (  <div key={index} className='text_left' style={{padding:'5px 10px 5px 10px',border:'.5px solid #ddd'}}> <span style={{fontWeight:'bold'}}>Comment : </span>{e.body}</div>)
             }
             )}
 </div>:null}

@@ -42,8 +42,8 @@ function HomePage(props) {
     <tbody>
     
     {  data!=null?
-          data.map(e=>{
-             return (  <tr>
+          data.map((e,index)=>{
+             return (  <tr key={index}>
                     <td>{e.name}</td>
                     <td>{e.company.name}</td>
                     <td onClick={()=>{props.setUid(e.id)

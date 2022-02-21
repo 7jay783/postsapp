@@ -39,7 +39,10 @@ th {
 #table tr:hover {
   background-color: #ddd;
 }
-
+#table tr > td:last-child {
+  cursor: pointer;
+  color: #04aa6d;
+}
 #table th {
   padding-top: 12px;
   padding-bottom: 12px;
